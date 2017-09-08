@@ -1,0 +1,87 @@
+{
+  "shop": {
+    "name": "Shop1",
+    "adress": "Streety McStreet 4",
+    "sections": [
+      {
+        "name": "diary",
+        "category": [
+          {
+            "name": "milk",
+            "items": [
+              {
+                "name": "Milk 2%",
+                "price": "0.87€",
+                "units": "1l",
+                "quantity": "15",
+                "restockDate": "2017-10-01"
+              },
+              {
+                "name": "Milk 3.5%",
+                "price": "0.91€",
+                "units": "0.9l",
+                "quantity": "9",
+                "restockDate": "2017-10-01"
+              }
+            ]
+          },
+          {
+            "name": "eggs",
+            "items": [
+              {
+                "name": "Chicken Eggs(white)",
+                "price": "0.87€",
+                "units": "10 eggs",
+                "quantity": "2",
+                "restockDate": "2017-09-28"
+              },
+              {
+                "name": "Chicken Eggs(brown)",
+                "price": "0.91€",
+                "units": "10 eggs",
+                "quantity": "3",
+                "restockDate": "2017-10-11"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "bakery",
+        "category": [
+          {
+            "-name": "bread",
+            "items": [
+              {
+                "name": "White bread",
+                "price": "1.2€",
+                "units": "200g",
+                "quantity": "5",
+                "restockDate": "2017-09-15"
+              }
+            ]
+          },
+          {
+            "name": "buns",
+            "items": [
+              {
+                "name": "Creamy bun with cottage cheese",
+                "price": "0.35€",
+                "units": "bun",
+                "quantity": "6",
+                "restockDate": "2017-09-15"
+              },
+              {
+                "name": "French bun",
+                "price": "0.15€",
+                "units": "bun",
+                "quantity": "9",
+                "restockDate": "2017-09-14"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
