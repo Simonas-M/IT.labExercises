@@ -14,32 +14,32 @@ _pradinis elementas:_
 //shop/section[@name="diary"]/category[@name="milk"]
 ```
 
-_grazina visus protevius pasirinkto elemento:_
+_gražina visus pasirinkto elemento protėvius:_
 ```xpath
 //shop/section[@name="diary"]/category[@name="milk"]/ancestor::*
 ```
 
-_grazina visus anukus ir proanukius pasirinkto elemento:_
+_gražina visus pasirinkto elemento anukus ir proanukius:_
 ```xpath
 //shop/section[@name="diary"]/category[@name="milk"]/dencendant::*
 ```
 
-_grazina visus po pasirinkto elemento einancius tame paciame bloke esancius elementus:_
+_gražina visus po pasirinkto elemento einančius tame pačiame bloke esančius elementus:_
 ```xpath
 //shop/section[@name="diary"]/category[@name="milk"]/following-sibling::*
 ```
 
-_grazina visus pries pasirinkto elemento einancius tame paciame bloke esancius elementus:_
+_gražina visus prieš pasirinktą elementą einančius tame pačiame bloke esančius elementus:_
 ```xpath
 //shop/section[@name="diary"]/category[@name="milk"]/preceding-sibling::*
 ```
 
-_grazina visus po pasirinktos elemento einancius elementus:_
+_gražina visus po pasirinktos elemento einančius elementus:_
 ```xpath
 //shop/section[@name="diary"]/category[@name="milk"]/following::*
 ```
 
-_grazina visus pries pasirinkta zyme einancius elementus:_
+_gražina visus prieš pasirinktą elementą einančius elementus:_
 ```xpath
 //shop/section[@name="diary"]/category[@name="milk"]/preceding::*
 ```
@@ -54,20 +54,22 @@ __3.Funkcijas count() ir sum() (pvz., suskaičiuoti, kiek yra tam tikrų žymių
 
 ---
 
-_suskaičiuoja kiek item žymių yra XML faile:_
+_suskaičiuoja kiek prekės žymių yra XML dokumente:_
 ```xpath
 count(//item)
 // => 7.0
 ```
 
-_suskaičiuoja kiek yra item elementų, kurių quantity didesnis už 7:_
+_suskaičiuoja kiek yra prekės elementų, kurių kiekis didesnis už 7:_
 ```xpath
 count(//item/quantity[text()>'7'])
 // => 3.0
 ```
 
-_suskaičiuoja kiek iš viso yra item quantity bendrai sudėjus:_
+_suskaičiuoja koks iš viso yra prekių kiekis bendrai sudėjus:_
 ```xpath
 sum(//item/quantity)
 // => 49.0
 ```
+
+---
