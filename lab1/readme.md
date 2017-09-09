@@ -8,6 +8,7 @@ __1.Pasirinkti savo XML dokumente vieną žymę (turinčią bent vieną protėv�
 __(po vieną pavyzdį kiekvienai ašiai), mokėti paaiškinti rezultatą__
 
 ---
+
 _pradinis elementas:_
 ```xpath
 //shop/section[@name="diary"]/category[@name="milk"]
@@ -43,5 +44,30 @@ _grazina visus pries pasirinkta zyme einancius elementus:_
 //shop/section[@name="diary"]/category[@name="milk"]/preceding::*
 ```
 
+---
+
 __2.Parašyti XPath kelią su predikatu, kurio viduje yra panaudotas XPath kelias (pvz.: rasti visas žymes A, kurių atributas x turi tokią pačią reikšmę kaip penktos dokumente žymės B atributas y; čia A, B, x, y pakeiskite į savo dokumento žymes/atributus), paaiškinti predikato veikimo principą__
 
+---
+
+__3.Funkcijas count() ir sum() (pvz., suskaičiuoti, kiek yra tam tikrų žymių/atributų, susumuoti tam tikrų žymių turinį), gebėti paaiškinti, ką ir kodėl grąžina išraiška sum(//*)šiam XML dokumentui: <a><b>2</b><c>3</c></a> (dėstytojas pakeis XML dokumentą)__
+
+---
+
+_suskaičiuoja kiek item žymių yra XML faile:_
+```xpath
+count(//item)
+// => 7.0
+```
+
+_suskaičiuoja kiek yra item elementų, kurių quantity didesnis už 7:_
+```xpath
+count(//item/quantity[text()>'7'])
+// => 3.0
+```
+
+_suskaičiuoja kiek iš viso yra item quantity bendrai sudėjus:_
+```xpath
+sum(//item/quantity)
+// => 49.0
+```
