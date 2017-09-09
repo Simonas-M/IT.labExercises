@@ -21,7 +21,7 @@ _gražina visus pasirinkto elemento protėvius:_
 
 _gražina visus pasirinkto elemento anukus ir proanukius:_
 ```xpath
-//shop/section[@name="diary"]/category[@name="milk"]/dencendant::*
+//shop/section[@name="diary"]/category[@name="milk"]/descendant::*
 ```
 
 _gražina visus po pasirinkto elemento einančius tame pačiame bloke esančius elementus:_
@@ -50,6 +50,10 @@ __2.Parašyti XPath kelią su predikatu, kurio viduje yra panaudotas XPath kelia
 
 ---
 
+TODO
+
+---
+
 __3.Funkcijas count() ir sum() (pvz., suskaičiuoti, kiek yra tam tikrų žymių/atributų, susumuoti tam tikrų žymių turinį), gebėti paaiškinti, ką ir kodėl grąžina išraiška sum(//*)šiam XML dokumentui: <a><b>2</b><c>3</c></a> (dėstytojas pakeis XML dokumentą)__
 
 ---
@@ -71,5 +75,45 @@ _suskaičiuoja koks iš viso yra prekių kiekis bendrai sudėjus:_
 sum(//item/quantity)
 // => 49.0
 ```
+
+---
+
+__4.Operacijas <, =, + su skirtingų tipų operandais, ir paaiškinti, kaip apliekamas automatinis tipų konvertavimas (pvz. mokėti paaiškinti, kaip apskaičiuojamas išraiškos 5 < "kuku" rezultatas).__
+
+---
+
+_gražina visus prekės elementus kurių kaina yra didesnė už 0.9_
+```xpath
+//item[price > 0.9]
+```
+
+_gražina visus prekės elementus kurių kaina yra lygi 0.9_
+```xpath
+//item[price = 0.9]
+```
+
+_gražina visus prekės elementus kurių kaina yra mažesnė už 0.9 ir valiuta yra €_
+```xpath
+//item/price[@currency = '€'][text() > 0.9]/parent::item
+```
+
+---
+
+__5.Reikia parašyti trijų žingsnių XPath išraišką (turi būti naudojamas bent vienas predikatas ir dvi skirtingos ašys) ir į atsiskaitymą atsinešti nupieštas aibes, kurios sukuriamos kiekvieno žingsnio apdorojimo rezultate__
+
+---
+
+TODO
+
+---
+
+__6.parašyti išraišką, su operatoriumi = arba != lyginančią:__
+* aibę ir skaičių,
+* aibę ir eilutę,
+* aibę ir loginę reikšmę,
+* dvi aibes
+__bei mokėti paaiškinti visais atvejais atliekamus tipų konvertavimus__
+
+[Plačiau](https://www.stylusstudio.com/docs/v2009/d_xpath57.html)
 
 ---
