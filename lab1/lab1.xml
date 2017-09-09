@@ -6,14 +6,14 @@
     <category name="milk">
       <item>
         <name>Milk 2%</name>
-        <price>0.87€</price>
+        <price currency="€">0.87</price>
         <units>1l</units>
         <quantity>15</quantity>
         <restockDate>2017-10-01</restockDate>
       </item>
       <item>
         <name>Milk 3.5%</name>
-        <price>0.91€</price>
+        <price currency="€">0.91</price>
         <units>0.9l</units>
         <quantity>9</quantity>
         <restockDate>2017-10-01</restockDate>
@@ -22,14 +22,14 @@
     <category name="eggs">
       <item>
         <name>Chicken Eggs(white)</name>
-        <price>0.87€</price>
+        <price currency="€">0.87</price>
         <units>10 eggs</units>
         <quantity>2</quantity>
         <restockDate>2017-09-28</restockDate>
       </item>
       <item>
         <name>Chicken Eggs(brown)</name>
-        <price>0.91€</price>
+        <price currency="€">0.91</price>
         <units>10 eggs</units>
         <quantity>3</quantity>
         <restockDate>2017-10-11</restockDate>
@@ -40,7 +40,7 @@
     <category name="bread">
       <item>
         <name>White bread</name>
-        <price>1.2€</price>
+        <price currency="€">1.2</price>
         <units>200g</units>
         <quantity>5</quantity>
         <restockDate>2017-09-15</restockDate>
@@ -49,14 +49,14 @@
     <category name="buns">
       <item>
         <name>Creamy bun with cottage cheese</name>
-        <price>0.35€</price>
+        <price currency="€">0.35</price>
         <units>bun</units>
         <quantity>6</quantity>
         <restockDate>2017-09-15</restockDate>
       </item>
       <item>
         <name>French bun</name>
-        <price>0.15€</price>
+        <price currency="€">0.15</price>
         <units>bun</units>
         <quantity>9</quantity>
         <restockDate>2017-09-14</restockDate>
