@@ -50,7 +50,10 @@ __2.Parašyti XPath kelią su predikatu, kurio viduje yra panaudotas XPath kelia
 
 ---
 
-TODO
+_išraiška gražinanti visas prekes, kurių atsargų atnaujinimo data lygi pirmos prekės iš pieno skyriaus atsargų atnaujinimo datai_
+```xpath
+//item[restockDate = //category[@name='milk']/item[1]/restockDate]
+```
 
 ---
 
@@ -118,7 +121,7 @@ __bei mokėti paaiškinti visais atvejais atliekamus tipų konvertavimus__
 
 ---
 
-###Aibė ir skaičius
+### __Aibė ir skaičius__
 
 XPath procesorius ieško elemento elementų aibėje, kuris gražintų `true` reikšmę duotai išraiškai, jei reikia panaudoja funkciją `number()` norint paversti reikšmę į skaitinę. Ir tada ir tik tada jeigu randama tokia reikšmė, gražinamas `true` rezultatas
 
@@ -128,7 +131,7 @@ _išraiška, kurioje lyginama aibė su skaičiumi:_
 // => true
 ```
 
-###Aibė ir eilutė
+### __Aibė ir eilutė__
 
 XPath procesorius ieško elemento elementų aibėje, kuris gražintų `true` reikšmę duotai išraiškai, jei reikia panaudoja funkciją `string()` norint paversti reikšmę į eilutę. Ir tada ir tik tada jeigu randama tokia reikšmė, gražinamas `true` rezultatas
 
@@ -138,7 +141,7 @@ _išraiška, kurioje lyginama aibė su eilute:_
 // => false
 ```
 
-###Aibė ir loginė reikšmė
+### __Aibė ir loginė reikšmė__
 
 rezultatas bus `true` jei elementas egzistuos, kitu atveju rezultatas - `false`
 
@@ -148,7 +151,7 @@ _išraiška, kurioje lyginama aibė su loginė reikšmė:_
 // => false
 ```
 
-###Dvi aibės
+### __Dvi aibės__
 
 rezultatas bus `true` tada ir tik tada, kai kiekvienam aibių elementui yra kitoje aibėje esantis elementas, kurių loginio palyginimo rezultatas yra `true`
 
