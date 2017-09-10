@@ -117,3 +117,23 @@ __bei mokėti paaiškinti visais atvejais atliekamus tipų konvertavimus__
 [Plačiau](https://www.stylusstudio.com/docs/v2009/d_xpath57.html)
 
 ---
+
+###Aibė ir skaičius
+
+XPath procesorius ieško elemento elementų aibėje, kuris gražintų `true` reikšmę duotai išraiškai, jei reikia panaudoja funkciją `number()` norint paversti reikšmę į skaitinę. Ir tada ir tik tada jeigu randama tokia reikšmė, gražinamas `true` rezultatas
+
+_išraiška, kurioje lyginama aibė su skaičiumi:_
+```xpath
+//category[@name='milk']/item/quantity = 15
+// => true
+```
+
+###Aibė ir eilutė
+
+XPath procesorius ieško elemento elementų aibėje, kuris gražintų `true` reikšmę duotai išraiškai, jei reikia panaudoja funkciją `string()` norint paversti reikšmę į eilutę. Ir tada ir tik tada jeigu randama tokia reikšmė, gražinamas `true` rezultatas
+
+_išraiška, kurioje lyginama aibė su eilute:_
+```xpath
+//category[@name='eggs']/item/price/@currency = '$'
+// => false
+```
