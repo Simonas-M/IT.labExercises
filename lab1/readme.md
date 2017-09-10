@@ -107,7 +107,7 @@ TODO
 
 ---
 
-__6.parašyti išraišką, su operatoriumi = arba != lyginančią:__
+__6.Parašyti išraišką, su operatoriumi = arba != lyginančią:__
 * aibę ir skaičių,
 * aibę ir eilutę,
 * aibę ir loginę reikšmę,
@@ -136,4 +136,38 @@ _išraiška, kurioje lyginama aibė su eilute:_
 ```xpath
 //category[@name='eggs']/item/price/@currency = '$'
 // => false
+```
+
+###Aibė ir loginė reikšmė
+
+rezultatas bus `true` jei elementas egzistuos, kitu atveju rezultatas - `false`
+
+_išraiška, kurioje lyginama aibė su loginė reikšmė:_
+```xpath
+//category[@name='wood'] != true
+// => false
+```
+
+###Dvi aibės
+
+rezultatas bus `true` tada ir tik tada, kai kiekvienam aibių elementui yra kitoje aibėje esantis elementas, kurių loginio palyginimo rezultatas yra `true`
+
+_išraiška, kurioje lyginamos dvi aibės:_
+```xpath
+//category[@name='milk'] != //category[@name='eggs']
+// => false
+```
+
+---
+
+__7.Parašyti išraišką, su operatoriais <, > lyginančią dvi aibes ir mokėti paaiškinti atliekamus automatinius tipų konvertavimus__
+
+---
+
+rezultatas bus `true` tada ir tik tada, kai kiekvienam aibių elementui kitoje aibėje yra elementas, kurių loginio palyginimo rezultatas yra `true`. Jeigu aibėje yra eilutės tas aibes galima palyginti tik `=` ir `!=`. Jei aibėse nėra eilučių, o tik skaitinės reikšmės, tada aibes galima palyginti ir `<`, `>`, `<=`, `>=`, `=` bei `!=`.
+
+_išraiška, kurioje lyginamos dvi aibės:_
+```xpath
+//category[@name='milk'] < //category[@name='eggs']
+// => false, nes aibėje yra eilučių, kurių negalima įvertinti `<` loginiu palyginimu
 ```
