@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shop xmlns="http://namespace.com" xmlns:si="http://SI.org">
+<shop xmlns="http://barbora.lt" xmlns:si="http://SI.org">
   <name>Shop1</name>
   <adress>Streety McStreet 4</adress>
   <section name="diary">
