@@ -150,7 +150,7 @@ rezultatas bus `true` jei elementas egzistuos, kitu atveju rezultatas - `false`
 
 _išraiška, kurioje lyginama aibė su loginė reikšmė:_
 ```xpath
-//category[@name='wood'] != true
+//category[@name='wood'] != true()
 // => false
 ```
 

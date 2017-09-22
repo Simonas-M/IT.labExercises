@@ -1,0 +1,49 @@
+<item>
+  <name>Milk 2%</name>
+  <price currency="€">0.87</price>
+  <units measurement="l">1</units>
+  <quantity>15</quantity>
+  <restockDate>2017:10:01</restockDate>
+</item>
+<item>
+  <name>Milk 3.5%</name>
+  <price currency="€">0.91</price>
+  <units measurement="l">0.9</units>
+  <quantity>9</quantity>
+  <restockDate>2017:10:01</restockDate>
+</item>
+<item>
+  <name>Chicken Eggs(white)</name>
+  <price currency="€">0.87</price>
+  <units>10</units>
+  <quantity>2</quantity>
+  <restockDate>2017:09:28</restockDate>
+</item>
+<item>
+  <name>Chicken Eggs(brown)</name>
+  <price currency="€">0.91</price>
+  <units>10</units>
+  <quantity>3</quantity>
+  <restockDate>2017:10:11</restockDate>
+</item>
+<item>
+  <name>White bread</name>
+  <price currency="€">1.2</price>
+  <units measurement="g">200</units>
+  <quantity>5</quantity>
+  <restockDate>2017:09:15</restockDate>
+</item>
+<item>
+  <name>Creamy bun with cottage cheese</name>
+  <price currency="€">0.35</price>
+  <units>1</units>
+  <quantity>6</quantity>
+  <restockDate>2017:09:15</restockDate>
+</item>
+<item>
+  <name>French bun</name>
+  <price currency="€">0.15</price>
+  <units>1</units>
+  <quantity>9</quantity>
+  <restockDate>2017:10:01</restockDate>
+</item>
