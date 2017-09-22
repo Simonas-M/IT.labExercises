@@ -106,7 +106,10 @@ __5.Reikia parašyti trijų žingsnių XPath išraišką (turi būti naudojamas 
 
 ---
 
-TODO
+_gražina visus prekės elementus, kurių __kiekio__ elementas neturi __matavimo__ atributo_
+```xpath
+/descendant-or-self::item/child::units[not(@measurement)]
+```
 
 ---
 
