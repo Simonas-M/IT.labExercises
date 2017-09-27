@@ -57,7 +57,7 @@ _išraiška gražinanti visas prekes, kurių atsargų atnaujinimo data lygi pirm
 
 ---
 
-__3.Funkcijas count() ir sum() (pvz., suskaičiuoti, kiek yra tam tikrų žymių/atributų, susumuoti tam tikrų žymių turinį), gebėti paaiškinti, ką ir kodėl grąžina išraiška sum(//*)šiam XML dokumentui: ```<a><b>2</b><c>3</c></a>``` (dėstytojas pakeis XML dokumentą)__
+__3.Funkcijas count() ir sum() (pvz., suskaičiuoti, kiek yra tam tikrų žymių/atributų, susumuoti tam tikrų žymių turinį), gebėti paaiškinti, ką ir kodėl grąžina išraiška sum(//*)šiam XML dokumentui: `<a><b>2</b><c>3</c></a>` (dėstytojas pakeis XML dokumentą)__
 
 ---
 
