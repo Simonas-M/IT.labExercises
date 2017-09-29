@@ -69,7 +69,7 @@ count(//item)
 
 _suskaičiuoja kiek yra prekės elementų, kurių kiekis didesnis už 7:_
 ```xpath
-count(//item/quantity[text()>'7'])
+count(//item[quantity > 7])
 // => 3.0
 ```
 
