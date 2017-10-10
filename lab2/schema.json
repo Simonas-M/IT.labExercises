@@ -1,5 +1,5 @@
 {
-  "$schema": "http://barbora.lt/schema#",
+  "$schema": "http://barbora.lt/JSON/schema#",
   "description": "A representation of an online shop",
   "type": "object",
   "required": [ "shop" ],

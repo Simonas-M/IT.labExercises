@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <xs:element name="shop" type="Shop"/>
+
+<!-- Shop definition -->
+  <xs:complexType name="Shop">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="address" type="xs:string"/>
+      <xs:element name="section" type="shopSection" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+<!-- shopSection definition -->
+  <xs:complexType name="shopSection">
+    <xs:sequence>
+      <xs:element name="category" type="shopCategory" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+
+<!-- shopCategory definition -->
+  <xs:complexType name="shopCategory">
+    <xs:sequence>
+      <xs:element name="item" type="shopItem" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+
+<!-- shopItem definition -->
+  <xs:complexType name="shopItem">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="price" type="itemPrice"/>
+      <xs:element name="units" type="itemUnits"/>
+      <xs:element name="quantity" type="xs:int"/>
+      <xs:element name="restockDate" type="xs:date"/>
+    </xs:sequence>
+  </xs:complexType>
+
+<!-- itemUnits definition -->
+<xs:complexType name="itemUnits">
+  <xs:simpleContent>
+    <xs:extension base="xs:double">
+      <xs:attribute name="measurement" type="itemMeasurement"/>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+<xs:simpleType name="itemMeasurement">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="l" />
+    <xs:enumeration value="g" />
+  </xs:restriction>
+</xs:simpleType>
+
+<!-- itemPrice definition -->
+<xs:complexType name="itemPrice">
+  <xs:simpleContent>
+    <xs:extension base="xs:double">
+      <xs:attribute name="currency" type="itemCurrency"/>    
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+<xs:simpleType name="itemCurrency">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="€" />
+    <xs:enumeration value="$" />
+  </xs:restriction>
+</xs:simpleType>
+</xs:schema>
