@@ -1,7 +1,7 @@
 {
   "shop": {
     "name": "Shop1",
-    "adress": "Streety McStreet 4",
+    "address": "Streety McStreet 4",
     "sections": [
       {
         "name": "diary",
@@ -13,26 +13,26 @@
                 "name": "Milk 2%",
                 "price": {
                   "currency": "€",
-                  "value": "0.87"
+                  "value": 0.87
                 },
                 "units": {
                   "measurement": "l",
-                  "value": "1"
+                  "value": 1
                 },
-                "quantity": "15",
+                "quantity": 15,
                 "restockDate": "2017-10-01"
               },
               {
                 "name": "Milk 3.5%",
                 "price": {
                   "currency": "€",
-                  "value": "0.91"
+                  "value": 0.91
                 },
                 "units": {
                   "measurement": "l",
-                  "value": "0.9"
+                  "value": 0.9
                 },
-                "quantity": "9",
+                "quantity": 9,
                 "restockDate": "2017-10-01"
               }
             ]
@@ -44,24 +44,24 @@
                 "name": "Chicken Eggs(white)",
                 "price": {
                   "currency": "€",
-                  "value": "0.87"
+                  "value": 0.87
                 },
                 "units": {
                   "value": 10
                 },
-                "quantity": "2",
+                "quantity": 2,
                 "restockDate": "2017-09-28"
               },
               {
                 "name": "Chicken Eggs(brown)",
                 "price": {
                   "currency": "€",
-                  "value": "0.91"
+                  "value": 0.91
                 },
                 "units": {
                   "value": 10
                 },
-                "quantity": "3",
+                "quantity": 3,
                 "restockDate": "2017-10-11"
               }
             ]
@@ -78,13 +78,13 @@
                 "name": "White bread",
                 "price": {
                   "currency": "€",
-                  "value": "1.2"
+                  "value": 1.2
                 },
                 "units": {
                   "measurement": "g",
-                  "value": "200"
+                  "value": 200
                 },
-                "quantity": "5",
+                "quantity": 5,
                 "restockDate": "2017-09-15"
               }
             ]
@@ -96,20 +96,24 @@
                 "name": "Creamy bun with cottage cheese",
                 "price": {
                   "currency": "€",
-                  "value": "0.35"
+                  "value": 0.35
                 },
-                "units": "1",
-                "quantity": "6",
+                "units": {
+                  "value": 1
+                },
+                "quantity": 6,
                 "restockDate": "2017-09-15"
               },
               {
                 "name": "French bun",
                 "price": {
                   "currency": "€",
-                  "value": "0.15"
+                  "value": 0.15
                 },
-                "units": "1",
-                "quantity": "9",
+                "units": {
+                  "value": 1
+                },
+                "quantity": 9,
                 "restockDate": "2017-10-01"
               }
             ]
