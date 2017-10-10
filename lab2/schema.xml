@@ -40,32 +40,32 @@
   </xs:complexType>
 
 <!-- itemUnits definition -->
-<xs:complexType name="itemUnits">
-  <xs:simpleContent>
-    <xs:extension base="xs:double">
-      <xs:attribute name="measurement" type="itemMeasurement"/>
-    </xs:extension>
-  </xs:simpleContent>
-</xs:complexType>
-<xs:simpleType name="itemMeasurement">
-  <xs:restriction base="xs:string">
-    <xs:enumeration value="l" />
-    <xs:enumeration value="g" />
-  </xs:restriction>
-</xs:simpleType>
+  <xs:complexType name="itemUnits">
+    <xs:simpleContent>
+      <xs:extension base="xs:double">
+        <xs:attribute name="measurement" type="itemMeasurement"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="itemMeasurement">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="l" />
+      <xs:enumeration value="g" />
+    </xs:restriction>
+  </xs:simpleType>
 
 <!-- itemPrice definition -->
-<xs:complexType name="itemPrice">
-  <xs:simpleContent>
-    <xs:extension base="xs:double">
-      <xs:attribute name="currency" type="itemCurrency"/>    
-    </xs:extension>
-  </xs:simpleContent>
-</xs:complexType>
-<xs:simpleType name="itemCurrency">
-  <xs:restriction base="xs:string">
-    <xs:enumeration value="€" />
-    <xs:enumeration value="$" />
-  </xs:restriction>
-</xs:simpleType>
+  <xs:complexType name="itemPrice">
+    <xs:simpleContent>
+      <xs:extension base="xs:double">
+        <xs:attribute name="currency" type="itemCurrency"/>    
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="itemCurrency">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="€" />
+      <xs:enumeration value="$" />
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>
