@@ -1,0 +1,104 @@
+{
+  "$schema": "http://barbora.lt/JSON/schema#",
+  "description": "A representation of an online shop",
+  "type": "object",
+  "required": [ "shop" ],
+  "properties": {
+    "shop": {
+      "$ref": "#/definitions/Shop"
+    }
+  },
+  "definitions": {
+    "Shop": {
+      "description": "Online shop",
+      "type": "object",
+      "required": [ "name", "address", "sections" ],
+      "properties": {
+        "name": { "type": "string" },
+        "address": { "type": "string" },
+        "sections": {
+          "description": "section array",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Section"
+          }
+        }
+      }
+    },
+    "Section": {
+      "description": "section object",
+      "type": "object",
+      "required": [ "name", "category" ],
+      "properties": {
+        "name": { "type": "string" },
+        "category": {
+          "description": "category of a section",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Category"
+          }
+        }
+      }
+    },
+    "Category": {
+      "description": "category object",
+      "type": "object",
+      "required": [ "name", "items" ],
+      "properties": {
+        "name": { "type": "string" },
+        "items": {
+          "description": "shop item array",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Item"
+          }
+        }
+      }
+    },
+    "Item": {
+      "description": "shop item",
+      "type": "object",
+      "required": [ "name", "price", "units", "quantity", "restockDate" ],
+      "properties": {
+        "name": { "type": "string" },
+        "price": {
+          "$ref": "#/definitions/ItemPrice"
+        },
+        "units": {
+          "$ref": "#/definitions/ItemUnits"                            
+        },
+        "quantity": { "type": "number" },
+        "restockDate": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "ItemPrice": {
+      "description": "item price",
+      "type": "object",
+      "required": [ "currency", "value" ],
+      "properties": {
+        "currency": {
+          "type": "string",
+          "enum": ["€", "$"]
+        },
+        "value": {
+          "type": "number"
+        }
+      }
+    },
+    "ItemUnits": {
+      "description": "item units",
+      "type": "object",
+      "required": [ "value" ],
+      "properties": {
+        "measurement": {
+          "type": "string",
+          "enum": ["l", "g"]
+        },
+        "value": { "type": "number" }
+      }
+    }
+  }
+}
