@@ -1,0 +1,73 @@
+<shop xlmns="http://www.babora.lt">
+  <name>Shop1</name>
+  <address>Streety McStreet 4</address>
+  <suppliers>
+    <supplier ID="LT">
+      We're <title>Trust Co.</title> we established in <year>2000</year> and we supply <category>Medicine</category> products
+    </supplier>
+    <supplier ID="UK">
+      We're <title>Diarist Corp.</title> we established in <year>1989</year> and we supply <category>Diary</category> products    
+    </supplier>
+  </suppliers>
+  <section name="diary">
+    <category name="milk">
+      <item supplier="LT">
+        <name>Milk 2%</name>
+        <price currency="€">0.87</price>
+        <units measurement="l">1</units>
+        <quantity>15</quantity>
+        <restockDates>2017-10-01 2017-10-02 2017-10-03</restockDates>
+      </item>
+      <item supplier="LT">
+        <name>Milk 3.5%</name>
+        <price currency="€">0.91</price>
+        <units measurement="l">0.9</units>
+        <quantity>9</quantity>
+        <restockDates>2017-10-01 2017-10-02 2017-10-03</restockDates>
+      </item>
+    </category>
+    <category name="eggs">
+      <item supplier="LT">
+        <name>Chicken Eggs(white)</name>
+        <price currency="€">0.87</price>
+        <units>10</units>
+        <quantity>2</quantity>
+        <restockDates>2017-10-01 2017-10-04 2017-10-07</restockDates>
+      </item>
+      <item supplier="LT">
+        <name>Chicken Eggs(brown)</name>
+        <price currency="€">0.91</price>
+        <units>10</units>
+        <quantity>3</quantity>
+        <restockDates>2017-10-01 2017-10-04 2017-10-05</restockDates>
+      </item>
+    </category>
+  </section>
+  <section name="bakery">
+    <category name="bread">
+      <item supplier="LT">
+        <name>White bread</name>
+        <price currency="€">1.2</price>
+        <units measurement="g">200</units>
+        <quantity>5</quantity>
+        <restockDates>2017-10-01 2017-10-02 2017-10-03</restockDates>
+      </item>
+    </category>
+    <category name="buns">
+      <item supplier="LT">
+        <name>Creamy bun with cottage cheese</name>
+        <price currency="€">0.35</price>
+        <units>1</units>
+        <quantity>6</quantity>
+        <restockDates>2017-10-01 2017-10-02 2017-10-03</restockDates>
+      </item>
+      <item supplier="LT">
+        <name>French bun</name>
+        <price currency="€">0.15</price>
+        <units>1</units>
+        <quantity>9</quantity>
+        <restockDates>2017-10-01 2017-10-02 2017-10-03</restockDates>
+      </item>
+    </category>
+  </section>
+</shop>

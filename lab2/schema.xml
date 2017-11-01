@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.barbora.lt"
+           xmlns="http://www.barbora.lt"
+           elementFormDefault="qualified">
 
-  <xs:element name="shop" type="Shop"/>
+  <xs:element name="shop" type="Shop">
+    <xs:key name="supplierID">
+      <xs:selector xpath="suppliers/supplier"/>
+      <xs:field xpath="@ID"/>
+    </xs:key>
+    <xs:keyref name="referenceToSupplier" refer="supplierID">
+      <xs:selector xpath="section/category/item"/>
+      <xs:field xpath="@supplier"/>
+    </xs:keyref>
+  </xs:element>
 
 <!-- Shop definition -->
   <xs:complexType name="Shop">
+    <xs:complexContent>
+      <xs:extension base="shopInfo">
+        <xs:sequence>
+          <xs:element name="section" type="shopSection" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- shopInfo definition -->
+  <xs:complexType name="shopInfo">
+    <xs:complexContent>
+      <xs:restriction base="xs:anyType">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string"/>              
+          <xs:element name="address" type="xs:string"/>
+          <xs:element name="suppliers" type="shopSuppliers"/>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- ###shopSuppliers definition -->
+  <xs:complexType name="shopSuppliers">
     <xs:sequence>
-      <xs:element name="name" type="xs:string"/>
-      <xs:element name="address" type="xs:string"/>
-      <xs:element name="section" type="shopSection" maxOccurs="unbounded"/>
+      <xs:element name="supplier" maxOccurs="unbounded">
+        <xs:complexType mixed="true">
+          <xs:choice minOccurs="3" maxOccurs="3">
+            <xs:element name="year" type="xs:int" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="category" type="xs:string" minOccurs="1" maxOccurs="1"/>
+          </xs:choice>
+          <xs:attribute name="ID" type="xs:string" use="required"/>        
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -23,9 +66,25 @@
 <!-- shopCategory definition -->
   <xs:complexType name="shopCategory">
     <xs:sequence>
-      <xs:element name="item" type="shopItem" maxOccurs="unbounded"/>
+      <xs:element name="item" type="LTshopItem" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+
+  <!-- ###LTshopItem definition -->
+  <xs:complexType name="LTshopItem">
+    <xs:complexContent>
+      <xs:restriction base="shopItem">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="price" type="itemPrice"/>
+          <xs:element name="units" type="itemUnits"/>
+          <xs:element name="quantity" type="xs:int"/>
+          <xs:element name="restockDates" type="dateList"/>
+        </xs:sequence>
+        <xs:attribute name="supplier" type="xs:string" use="required" fixed="LT"/>
+      </xs:restriction>
+    </xs:complexContent>
   </xs:complexType>
 
 <!-- shopItem definition -->
@@ -35,37 +94,77 @@
       <xs:element name="price" type="itemPrice"/>
       <xs:element name="units" type="itemUnits"/>
       <xs:element name="quantity" type="xs:int"/>
-      <xs:element name="restockDate" type="xs:date"/>
+      <xs:element name="restockDates" type="dateList"/>
     </xs:sequence>
+    <xs:attribute name="supplier" type="xs:string"/>
   </xs:complexType>
+
 
 <!-- itemUnits definition -->
   <xs:complexType name="itemUnits">
     <xs:simpleContent>
-      <xs:extension base="xs:double">
+      <xs:extension base="shopFloatValue">
         <xs:attribute name="measurement" type="itemMeasurement"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+<!-- ###itemMeasurement definition -->
   <xs:simpleType name="itemMeasurement">
     <xs:restriction base="xs:string">
       <xs:enumeration value="l" />
       <xs:enumeration value="g" />
     </xs:restriction>
   </xs:simpleType>
+  
 
 <!-- itemPrice definition -->
   <xs:complexType name="itemPrice">
     <xs:simpleContent>
-      <xs:extension base="xs:double">
+      <xs:extension base="shopFloatValue">
         <xs:attribute name="currency" type="itemCurrency"/>    
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+<!-- itemCurrency definition -->
   <xs:simpleType name="itemCurrency">
     <xs:restriction base="xs:string">
       <xs:enumeration value="€" />
       <xs:enumeration value="$" />
     </xs:restriction>
+  </xs:simpleType>
+
+<!-- floatValue definition -->
+  <xs:complexType name="floatValue">
+    <xs:simpleContent>
+      <xs:extension base="xs:double">
+        <xs:attribute name="expression" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+<!-- shopFloatValue definition -->
+  <xs:complexType name="shopFloatValue">
+    <xs:simpleContent>
+      <xs:restriction base="floatValue">
+        <xs:maxInclusive value="1000"/>
+        <xs:minInclusive value="0"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+
+<!-- Apribojimo principo pavyzdys -->
+  <!-- <xs:complexType name="someFloat">
+    <xs:simpleContent>
+      <xs:restriction base="shopFloatValue">
+        <xs:maxInclusive value="1600"/>
+        <xs:minInclusive value="-100"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType> -->
+  
+
+<!-- ###restockDates list definition -->
+  <xs:simpleType name="dateList">
+    <xs:list itemType="xs:date"/>
   </xs:simpleType>
 </xs:schema>
