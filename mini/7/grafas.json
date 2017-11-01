@@ -1,0 +1,35 @@
+{
+  "points": [
+    {
+      "name": "A",
+      "weigth":3
+    }, {
+      "name": "B",
+      "weigth":7
+    }, {
+      "name": "C",
+      "weigth":5
+    }, {
+      "name": "D",
+      "weigth":10
+    }
+  ],
+  "links": [
+    {
+      "from": "A",
+      "to": "B"
+    }, {
+      "from": "B",
+      "to": "C"
+    }, {
+      "from": "C",
+      "to": "D"
+    }, {
+      "from": "A",
+      "to": "D"
+    }, {
+      "from": "B",
+      "to": "D"
+    }
+  ]
+}
