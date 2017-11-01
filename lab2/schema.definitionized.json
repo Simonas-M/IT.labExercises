@@ -1,5 +1,5 @@
 {
-  "$schema": "http://barbora.lt/JSON/schema#",
+  "$schema": "http://json-schema.org/draft-06/schema#",
   "description": "A representation of an online shop",
   "type": "object",
   "required": [ "shop" ],
@@ -14,8 +14,18 @@
       "type": "object",
       "required": [ "name", "address", "sections" ],
       "properties": {
-        "name": { "type": "string" },
-        "address": { "type": "string" },
+        "name": {
+          "anyOf": [
+            {"$ref": "#/definitions/ShopName"},
+            {"$ref": "#/definitions/ShopNameAndID"}
+          ]
+        },
+        "address": {
+          "oneOf": [
+            {"$ref": "#/definitions/StreetAddress"},
+            {"$ref": "#/definitions/Coordinates"}
+          ]
+        },
         "sections": {
           "description": "section array",
           "type": "array",
@@ -58,7 +68,7 @@
     "Item": {
       "description": "shop item",
       "type": "object",
-      "required": [ "name", "price", "units", "quantity", "restockDate" ],
+      "required": [ "name", "price", "units", "quantity", "restockDates" ],
       "properties": {
         "name": { "type": "string" },
         "price": {
@@ -68,37 +78,78 @@
           "$ref": "#/definitions/ItemUnits"                            
         },
         "quantity": { "type": "number" },
-        "restockDate": {
+        "restockDates": {
           "type": "string",
-          "format": "date"
+          "pattern": "^(\\d{4}-\\d{2}-\\d{2} )*\\d{4}-\\d{2}-\\d{2}$"
         }
       }
     },
-    "ItemPrice": {
-      "description": "item price",
+    "PositiveFloatValue": {
       "type": "object",
-      "required": [ "currency", "value" ],
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "Currency": {
+      "type": "object",
       "properties": {
         "currency": {
           "type": "string",
           "enum": ["€", "$"]
-        },
-        "value": {
-          "type": "number"
         }
-      }
+      }      
     },
-    "ItemUnits": {
-      "description": "item units",
+    "Measurement": {
       "type": "object",
-      "required": [ "value" ],
       "properties": {
         "measurement": {
           "type": "string",
           "enum": ["l", "g"]
-        },
-        "value": { "type": "number" }
+        }
       }
+    },
+    "ItemPrice": {
+      "allOf":[
+        {"$ref": "#/definitions/Currency"},
+        {"$ref": "#/definitions/PositiveFloatValue"}
+      ]
+    },
+    "ItemUnits": {
+      "allOf":[
+        {"$ref": "#/definitions/Measurement"},
+        {"$ref": "#/definitions/PositiveFloatValue"}
+      ]
+    },
+    "StreetAddress": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 50
+    },
+    "Coordinates": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": "number",
+          "minimum": -85,
+          "maximum": 85
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        }
+      }
+    },
+    "ShopName": {
+      "type": "string",
+      "pattern": "^\\w{5, 15}$"
+    },
+    "ShopNameAndID": {
+      "type": "string",
+      "pattern": "^\\w{3}-\\d{4}$"
     }
   }
 }

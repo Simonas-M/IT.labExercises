@@ -1,0 +1,125 @@
+{
+    "shop": {
+      "name": "Shop1",
+      "address": "Streety McStreet 4",
+      "sections": [
+        {
+          "name": "diary",
+          "category": [
+            {
+              "name": "milk",
+              "items": [
+                {
+                  "name": "Milk 2%",
+                  "price": {
+                    "currency": "€",
+                    "value": 0.87
+                  },
+                  "units": {
+                    "measurement": "l",
+                    "value": 1
+                  },
+                  "quantity": 15,
+                  "restockDates": "2017-10-01"
+                },
+                {
+                  "name": "Milk 3.5%",
+                  "price": {
+                    "currency": "€",
+                    "value": 0.91
+                  },
+                  "units": {
+                    "measurement": "l",
+                    "value": 0.9
+                  },
+                  "quantity": 9,
+                  "restockDates": "2017-10-01"
+                }
+              ]
+            },
+            {
+              "name": "eggs",
+              "items": [
+                {
+                  "name": "Chicken Eggs(white)",
+                  "price": {
+                    "currency": "€",
+                    "value": 0.87
+                  },
+                  "units": {
+                    "value": 10
+                  },
+                  "quantity": 2,
+                  "restockDates": "2017-09-28"
+                },
+                {
+                  "name": "Chicken Eggs(brown)",
+                  "price": {
+                    "currency": "€",
+                    "value": 0.91
+                  },
+                  "units": {
+                    "value": 10
+                  },
+                  "quantity": 3,
+                  "restockDates": "2017-10-11"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "bakery",
+          "category": [
+            {
+              "name": "bread",
+              "items": [
+                {
+                  "name": "White bread",
+                  "price": {
+                    "currency": "€",
+                    "value": 1.2
+                  },
+                  "units": {
+                    "measurement": "g",
+                    "value": 200
+                  },
+                  "quantity": 5,
+                  "restockDates": "2017-09-15"
+                }
+              ]
+            },
+            {
+              "name": "buns",
+              "items": [
+                {
+                  "name": "Creamy bun with cottage cheese",
+                  "price": {
+                    "currency": "€",
+                    "value": 0.35
+                  },
+                  "units": {
+                    "value": 1
+                  },
+                  "quantity": 6,
+                  "restockDates": "2017-09-15"
+                },
+                {
+                  "name": "French bun",
+                  "price": {
+                    "currency": "€",
+                    "value": 0.15
+                  },
+                  "units": {
+                    "value": 1
+                  },
+                  "quantity": 9,
+                  "restockDates": "2017-10-01"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
