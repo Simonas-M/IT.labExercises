@@ -1,3 +1,5 @@
+# XPATH
+
 __1.Pasirinkti savo XML dokumente vieną žymę (turinčią bent vieną protėvį, ir bent vieną anūką),parašyti XPath kelią, unikaliai nueinantį prie tos žymės, ir prie to kelio prirašyti dar vieną žingsnį,naudojant šias ašis:__
 
 * ancestor, descendant,

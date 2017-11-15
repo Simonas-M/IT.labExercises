@@ -1,4 +1,5 @@
-Reikia parašyti __HTML__ puslapį, kuriame būtų naudojamos tik struktūrinės žymės (išvardintos __HTML5__ dokumente). Negalima naudoti puslapio stilių nusakančių žymių bei atributų (`color`, `font`, `size`, ir panašiai). Stiliaus aprašymui reikia sukurti stilių lentelę, aprašytą atskirame faile. Turi būti patenkinti šie reikalavimai:
+# HTML/CSS
+### Reikia parašyti __HTML__ puslapį, kuriame būtų naudojamos tik struktūrinės žymės (išvardintos __HTML5__ dokumente). Negalima naudoti puslapio stilių nusakančių žymių bei atributų (`color`, `font`, `size`, ir panašiai). Stiliaus aprašymui reikia sukurti stilių lentelę, aprašytą atskirame faile. Turi būti patenkinti šie reikalavimai:
 
 * Dokumentas privalo būti validus __HTML5__ dokumentas. Validatoriai:
     * http://validator.nu

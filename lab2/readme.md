@@ -1,3 +1,5 @@
+# XML/JSON SCHEMA
+
 ## Reikia parašyti XML Schema dokumentą, apibrėžiantį jūsų sukurto XML dokumento struktūrą, kuriame būtų jūsų pačių susikurti:
 
 1. __Paprastas__ tipas, apribojantis kokį nors Schema standartinį tipą
