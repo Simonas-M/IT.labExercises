@@ -108,6 +108,6 @@
 1. Panaudoti bent __4 skirtingi__ duomenų tipai
 2. Panaudotas `enum` raktažodis
 3. Panaudoti bent 4 __validacijai__ skirti raktažodžiai
-4. Panaudotos bent 2[1] __reguliarios išraikos__
+4. Panaudotos bent 2 __reguliarios išraikos__
 5. Realizuotas schemų praplėtimas naudojantis `allOf`, `anyOf`, `oneOf` raktažodžiais
 6. Realizuotas schemų pakartotinis panaudojimas: `definitions` ir `$ref` raktažodžiai
