@@ -25,19 +25,16 @@
 
   <div class="content">
     <div class="panel clearfix">
-      <!-- image -->
       <img id="img-basket" src="https://www.barbora.lt/Assets/Images/home-alt/b-home-alt-desktop--main-section.png" alt="Pirkinių krepšelis"
       />
       <h3>PAPRASTAS IR GREITAS MAISTO PREKIŲ UŽSAKYMAS Į NAMUS</h3>
-      <form action="./success.html" method="get" class="">
-        <!-- input: email -->
+      <form action="./success.html" method="get">
         <div class="input-wrapper">
           <label for="email">El. paštas:</label>
           <input type="email" id="email" placeholder=" example@email.com" required>
         </div>
-        <!-- selection -->
         <div class="input-wrapper">
-          <label for="city" class="">Miestas:</label>
+          <label for="city">Miestas:</label>
           <select id="city">
             <option value="1">Vilniaus miestas / rajonas</option>
             <option value="3">Kauno miestas / rajonas</option>
@@ -45,17 +42,14 @@
             <option value="2">Trakų miestas / rajonas</option>
           </select>
         </div>
-        <!-- input: text -->
         <div class="input-wrapper">
           <label for="address">Gatvė:</label>
           <input type="text" required="" id="address" placeholder=" Didlaukio g. 47">
         </div>
-        <!-- input: date -->
         <div class="input-wrapper">
           <label for="born-date">Gimimo data:</label>
           <input type="date" id="born-date" required>
         </div>
-        <!-- input: radio -->
         <div class="input-wrapper">
           <span>Lytis:</span>
           <input name="gender" type="radio" id="gender-male">
@@ -63,14 +57,13 @@
           <input name="gender" type="radio" id="gender-female">
           <label for="gender-female">Moteris</label>
         </div>
-        <!-- input: checkbox -->
         <div class="input-wrapper">
           <label>
             <input type="checkbox" id="allow-newsletter" checked> Sutinku gauti naujienas
           </label>
         </div>
         <div>
-          <button type="submit" class="">Registruotis</button>
+          <button type="submit">Registruotis</button>
         </div>
       </form>
     </div>
