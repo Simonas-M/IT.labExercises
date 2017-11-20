@@ -3,90 +3,151 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title></title>
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+  <title>Barbarós</title>
   <link rel="stylesheet" href="css/index.css">
-  <!-- <link rel="stylesheet" href="css/main.css"> -->
-
-  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 
 <body>
-
   <header>
-    <h1 class="nav-title">Barbaros</h1>
-    <nav class="nav center-vertically">
+    <h1>Barbarós</h1>
+    <nav>
       <ul>
-        <li class="center-vertically">
-          <a href="/">Shop</a>
+        <li>
+          <a href="https://www.barbora.lt">Shop</a>
         </li>
-        <li class="center-vertically">
+        <li>
           <a href="#">Items</a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <div class="subscribe-form clearfix">
-    <img class="basket-img" src="https://www.barbora.lt/Assets/Images/home-alt/b-home-alt-desktop--main-section.png" />
-    <p class="">
-      PAPRASTAS IR GREITAS MAISTO PREKIŲ UŽSAKYMAS Į NAMUS
-    </p>
-    <form class="">
-      <div class="">
-        <div class="">
-          <label for="email" class="">El. paštas:</label>
-          <div class="">
-            <input type="email" class="form-control" id="email">
-          </div>
+  <div class="content">
+    <div class="panel clearfix">
+      <!-- image -->
+      <img id="img-basket" src="https://www.barbora.lt/Assets/Images/home-alt/b-home-alt-desktop--main-section.png" alt="Pirkinių krepšelis"
+      />
+      <h3>PAPRASTAS IR GREITAS MAISTO PREKIŲ UŽSAKYMAS Į NAMUS</h3>
+      <form action="./success.html" method="get" class="">
+        <!-- input: email -->
+        <div class="input-wrapper">
+          <label for="email">El. paštas:</label>
+          <input type="email" id="email" placeholder=" example@email.com" required>
         </div>
-        <div class="">
+        <!-- selection -->
+        <div class="input-wrapper">
           <label for="city" class="">Miestas:</label>
-          <div class="">
-            <select class="" id="city">
-              <option value="1">Vilniaus miestas / rajonas</option>
-              <option value="3">Kauno miestas / rajonas</option>
-              <option value="4">Klaipėdos miestas / rajonas</option>
-              <option value="2">Trakų miestas / rajonas</option>
-            </select>
-          </div>
+          <select id="city">
+            <option value="1">Vilniaus miestas / rajonas</option>
+            <option value="3">Kauno miestas / rajonas</option>
+            <option value="4">Klaipėdos miestas / rajonas</option>
+            <option value="2">Trakų miestas / rajonas</option>
+          </select>
         </div>
-        <div class="">
-          <label for="address" class="">Adresas:</label>
-          <div class="">
-            <div class="">
-              <div class=""></div>
-              <input type="text" required="" class="" id="address" placeholder="Pradėkite vesti ir išsirinkite iš sąrašo" autocomplete="off">
-            </div>
-          </div>
+        <!-- input: text -->
+        <div class="input-wrapper">
+          <label for="address">Gatvė:</label>
+          <input type="text" required="" id="address" placeholder=" Didlaukio g. 47">
         </div>
-      </div>
-      <div class="">
-        <div class="">
-          <div class="">
-            <label>
-              <input type="checkbox" id="allow-newsletter" checked> Sutinku gauti naujienas
-            </label>
-          </div>
+        <!-- input: date -->
+        <div class="input-wrapper">
+          <label for="born-date">Gimimo data:</label>
+          <input type="date" id="born-date" required>
         </div>
-      </div>
-      <div class="">
-        <div class="">
+        <!-- input: radio -->
+        <div class="input-wrapper">
+          <span>Lytis:</span>
+          <input name="gender" type="radio" id="gender-male">
+          <label for="gender-male">Vyras</label>
+          <input name="gender" type="radio" id="gender-female">
+          <label for="gender-female">Moteris</label>
+        </div>
+        <!-- input: checkbox -->
+        <div class="input-wrapper">
+          <label>
+            <input type="checkbox" id="allow-newsletter" checked> Sutinku gauti naujienas
+          </label>
+        </div>
+        <div>
           <button type="submit" class="">Registruotis</button>
         </div>
+      </form>
+    </div>
+
+    <div class="panel">
+      <h3>MIESTŲ STATISTIKA</h3>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th rowspan="2">Miestas/Rajonas</th>
+              <th colspan="2">Registruotų vartotojų skaičius</th>
+            </tr>
+            <tr>
+              <th>Vyrai</th>
+              <th>Moterys</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Vilnius</td>
+              <td>125</td>
+              <td>33</td>
+            </tr>
+            <tr>
+              <td>Kaunas</td>
+              <td>94</td>
+              <td>114</td>
+            </tr>
+            <tr>
+              <td>Klaipėda</td>
+              <td>37</td>
+              <td>54</td>
+            </tr>
+            <tr>
+              <td>Trakai</td>
+              <td>15</td>
+              <td>16</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </form>
+    </div>
+
+    <div class="panel">
+      <article>
+        <header>
+          <h3>BARBORÓS UŽPILDYS IR PATIES IŠRANKIAUSIO SKONIO ŠALDYTUVĄ!</h3>
+        </header>
+        <section>
+          <h4>Start reading here</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum hendrerit magna at mi consectetur semper. Curabitur vehicula
+            lacinia lectus, eu blandit lectus bibendum non. Aliquam sit amet facilisis magna. Curabitur dolor lectus, blandit
+            vitae justo tincidunt, iaculis tincidunt nisi. Maecenas volutpat aliquet felis eu porta. Donec tortor libero,
+            volutpat at lacus id, feugiat tempor lacus. Curabitur vestibulum magna sit amet dui consectetur, ac pellentesque
+            nisl ornare. Curabitur volutpat finibus vehicula. Orci varius natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. In a arcu sit amet nulla malesuada finibus. Curabitur nulla augue, commodo in ullamcorper
+            non, suscipit in erat. Suspendisse nec tellus a quam iaculis euismod et at sapien. Nullam ut dignissim dolor.
+          </p>
+          <p>
+            Vivamus sollicitudin eros et tempor interdum. Aenean libero tellus, sollicitudin vitae diam id, tincidunt placerat risus.
+            Cras sollicitudin malesuada laoreet. Cras sit amet finibus libero. Phasellus egestas in massa id dictum. Nullam
+            eu placerat tellus, non dignissim quam. Sed auctor purus in turpis gravida, vel blandit odio facilisis. Phasellus
+            euismod in magna sit amet porta. Etiam gravida quam non nisl hendrerit dapibus sit amet non eros. Sed nec neque
+            a massa porta rutrum. Aenean sollicitudin interdum metus, euismod consequat ex tincidunt quis. Cras malesuada
+            mollis vestibulum. Aenean interdum ex ac ipsum porttitor mollis sed a urna.
+          </p>
+        </section>
+      </article>
+    </div>
   </div>
 
   <footer>
-    <h4>Created by Simonas Mikulis Software Engineering 3rd course</h4>
+    <h4>Created by Simonas Mikulis Software Engineering 3rd course. All right reserved.</h4>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 
 </html>

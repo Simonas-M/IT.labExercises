@@ -1,35 +1,76 @@
-header {
+body > header {
     background-color: #f26629;
     border-bottom-left-radius: 50px;
     border-bottom: 10px solid #e54e27;
-    box-shadow: 0 5px 20px 0px #aaa;    
+    box-shadow: 0 5px 20px 0px #00000040;  
     position: fixed;
     left: 0;
     width: 100%;
     top: 0;
+    min-width: 665px;
 }
 
-footer {
+body > footer {
     background-color: #f26629;
     border-top-right-radius: 50px;
     border-top: 10px solid #e54e27;
-    box-shadow: 0 -5px 20px 0px #aaa;
+    box-shadow: 0 -5px 20px 0px #00000040;
     margin-top: 30px;
     position: fixed;
     left: 0;
     width: 100%;
     bottom: 0;
+    min-width: 665px;
 }
 
 footer > h4 {
     margin-left: 3%;
 }
-
-.basket-img {
-    float: right
+/* ----- PSEUDO ELEMENTS START ----- */
+p::first-letter {
+    font-size: 30px;
 }
 
-nav > ul > li {
+::selection {
+    background-color: rgba(60, 182, 75, 0.5);
+}
+/* ----- PSEUDO ELEMENTS END ----- */
+
+body {
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 2px 2px #e44d26;
+    font-family: Helvetica, "Helvetica Neue", Arial;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    min-width: 665px;
+}
+
+button {
+    background-color: #3cb64b;
+    border: none;
+    box-shadow: 2px 2px 0px 0px #e54e27;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+button:hover {
+    background-color: #36a341;     
+}
+button:active {
+    background-color: #31913c;    
+}
+
+/* ----- NAVIGATON START ----- */
+nav li {
     display: block;
     float: left;
     display: flex;
@@ -40,24 +81,18 @@ nav > ul > li {
     margin-left: 10px;
 }
 
-nav > ul > li:hover {
+nav li:hover {
     cursor: pointer;
     background: #c24020;
 }
 
-nav > ul > li > a {
+nav a {
     font-size: x-large;
     padding-right: 15px;
     padding-left: 15px;
     display: block;
     text-decoration: none;
     color: rgb(255, 255, 255);
-}
-
-.nav-title {
-    display: inline-block;
-    margin-left: 5%;
-    color: rgb(255, 255, 255);    
 }
 
 nav {
@@ -68,34 +103,96 @@ nav {
     height: 69px
 }
 
+/* ----- NAVIGATON END----- */
+
+body header h1 {
+    display: inline-block;
+    margin-left: 5%;
+    color: rgb(255, 255, 255);    
+}
+
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
 }
 
-body {
-    font-style: normal;
-    font-variant-ligatures: normal;
-    font-variant-caps: normal;
-    font-variant-numeric: normal;
-    font-weight: normal;
-    font-stretch: normal;
-    font-size: 16px;
-    line-height: 26px;
-    font-family: Helvetica, "Helvetica Neue", Arial;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-bottom: 100px;
-    margin-top: 100px;
+#img-basket {
+    float: right;
+    width: 43%;
 }
 
-.subscribe-form {
-    padding-left: 2%;
-    padding-top: 2%;
+.content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.panel {
+    padding: 2% 0% 2% 2%;
     margin: 3%;
     background-color: #f26629;
     border-radius: 15px;
     border-bottom: 10px solid #e54e27;
     box-shadow: 0 5px 20px 0px #aaa;
+}
+
+.input-wrapper {
+    width: 46%;
+    height: 26px;
+    border-radius: 5px;
+    margin: 5px 0px 5px 0px;
+}
+
+.input-wrapper input[type="text"],
+.input-wrapper input[type="email"],
+.input-wrapper input[type="date"],
+.input-wrapper select {
+    float: right;
+    width: 200px;
+    box-sizing: border-box;
+    height: inherit;
+}
+
+/* ----- TABLE START ----- */
+
+table {
+    background: #e44d26;
+    max-width: 100%;
+    width: 80%;
+    margin: auto;
+}
+
+thead { 
+    background-color: #f4753e;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4753e;
+}
+
+td:hover, th:hover {
+    background-color: rgba(60, 182, 75, 0.5);
+}
+
+/* ----- TABLE END ----- */
+
+@media screen and (max-width: 775px) {
+    #img-basket {
+        display: none;
+    }
+    .input-wrapper {
+        width: 95% !important;
+    }
+    .input-wrapper input[type="text"],
+    .input-wrapper input[type="email"],
+    .input-wrapper input[type="date"],
+    .input-wrapper select {
+        width: 300px !important;
+    }
+    table {
+        width: 100%;
+    }
+    div.panel {
+        padding: 2% 2% 2% 2%;
+    }
 }
