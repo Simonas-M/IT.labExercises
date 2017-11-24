@@ -181,12 +181,12 @@ td:hover, th:hover {
         display: none;
     }
     .input-wrapper {
-        width: 95% !important;
+        width: 95%;
     }
-    .input-wrapper input[type="text"],
-    .input-wrapper input[type="email"],
-    .input-wrapper input[type="date"],
-    .input-wrapper select {
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select {
         width: 300px !important;
     }
     table {
