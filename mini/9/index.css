@@ -1,0 +1,24 @@
+#A {
+    background-color: red;
+}
+#B {
+    background-color: green;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+#C {
+    background-color: blue;
+}
+#A, #B, #C {
+    display: inline-flex;
+    width: 10%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    text-align: center;
+}
+#A:hover, #B:hover, #C:hover {
+    background-color: pink;
+}
