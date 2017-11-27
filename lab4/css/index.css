@@ -1,0 +1,13 @@
+.removed {
+    text-decoration: line-through;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.todo {
+    display: flex;
+    justify-content: center;
+}
