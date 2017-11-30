@@ -11,28 +11,24 @@
     <div class="main-container">
         <h1>List of Todo's</h1>
         <form>
-            <input id="todo-title" type="text" placeholder="Brush my teeth" autocomplete="off" />
-            <input id="todo-points" type="text" placeholder="points" autocomplete="off" />
-            <input id="todo-date" type="text" placeholder="YYYY-MM-DD" autocomplete="off" />
+            <input id="todo-priority" type="text" placeholder="Priority" autocomplete="off" />
+            <input id="todo-task" type="text" placeholder="Task" autocomplete="off" />
+            <input id="todo-date" type="text" placeholder="yyyy-mm-dd" autocomplete="off" />
             <button id="todo-add" type="submit">Add</button>
         </form>
         <div class="todo-list">
-            <div class="todo">
-                <input type="checkbox"/>
-                <label for="checkbox">Do something</label>
-            </div>
-            <div class="todo">
-                <input type="checkbox"/>
-                <label for="checkbox">Do something</label>
-            </div>
-            <div class="todo">
-                <input type="checkbox"/>
-                <label for="checkbox">Do something</label>
-            </div>
-            <div class="todo">
-                <input type="checkbox"/>
-                <label for="checkbox">Do something</label>
-            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Status</td>
+                        <td>Priority</td>
+                        <td>Task title</td>
+                        <td>Due Date</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
     </div>
 </body>

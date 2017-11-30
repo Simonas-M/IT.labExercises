@@ -1,0 +1,53 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "isDone": true,
+      "priority": 5,
+      "task": "Take a shower",
+      "date": "2017-12-12"
+    },
+    {
+      "id": 2,
+      "isDone": true,
+      "priority": 4,
+      "task": "Brush my teeth",
+      "date": "2017-12-12"
+    },
+    {
+      "id": 3,
+      "isDone": false,
+      "priority": 3,
+      "task": "Have a breakfast",
+      "date": "2017-12-12"
+    },
+    {
+      "id": 4,
+      "isDone": true,
+      "priority": "2",
+      "task": "Go to work",
+      "date": "2017-12-12"
+    },
+    {
+      "id": 5,
+      "isDone": false,
+      "priority": 4,
+      "task": "Newest task yet",
+      "date": "2017-12-11"
+    },
+    {
+      "id": 6,
+      "isDone": false,
+      "priority": 55,
+      "task": "asd",
+      "date": "2011-01-01"
+    },
+    {
+      "id": 7,
+      "isDone": false,
+      "priority": 2,
+      "task": "wtf dude",
+      "date": "2011-01-01"
+    }
+  ]
+}
