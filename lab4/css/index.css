@@ -2,16 +2,22 @@
     text-decoration: line-through;
 }
 
-body {
+.up {
+    margin: 0px 0px auto 0px !important;
+}
+
+.center {
     display: flex;
     justify-content: center;
 }
 
 .todo-list {
-    display: flex;
-    justify-content: center;
+    margin-top: 3%;
 }
 
+.form-group > small {
+    display: none;
+}
 
 table {
     border-collapse: collapse;
@@ -20,7 +26,6 @@ table {
 td {
     position: relative;
     padding: 5px 10px;
-    border: 1px solid black;
 }
 
 tr.strikeout td:before {
@@ -30,4 +35,22 @@ tr.strikeout td:before {
     left: 0;
     border-bottom: 1px solid #111;
     width: 100%;
+}
+
+tr.todo td:nth-child(1) {
+    width: 106px;
+}
+
+.delete-todo {
+    color: #007aff;
+    float: right;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+thead {
+    background-color: #007aff;
+    font-size: larger;
+    font-weight: 700;
+    color: white;
 }
